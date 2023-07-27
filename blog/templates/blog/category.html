@@ -1,0 +1,9 @@
+{% block content %}
+
+{% for cat in categories %}
+    <h1>{{cat.name}}</h1>
+    {% comment %} <h1>{{cat.created_date}}</h1>
+    <h1>{{cat.created_by}}</h1> {% endcomment %}
+{% endfor %}
+    
+{% endblock content %}
