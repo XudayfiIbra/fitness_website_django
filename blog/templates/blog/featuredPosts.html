@@ -1,0 +1,25 @@
+<div class="container">
+    <h4 class="text-muted mt-5">Featured Posts</h4>
+</div>
+<hr>
+<div class="container">
+    <div class="row gy-4">
+        {% for post in featuredPosts %}
+        
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="card">
+                    <img src="{{post.image}}" class="card-img-top">
+                    <div class="card-body">
+                        <span class="tag">{{post.category|upper}}</span>
+                        <h5 class="card-title"></h5>
+                        <a href="" class="text-decoration-none link-dark">{{post.title}}</a>
+                        <p class="card-text">{{post.content|truncatewords:2}}</p>
+                        <p> <i class="fa fa-clock"></i> {{post.created_date|timesince}} ago</p>
+                        <a href="" class="btn btn-btn-outline-dark">Read more..</a>
+                    </div>
+                </div>
+            </div>
+        
+        {% endfor %}
+    </div>
+</div>

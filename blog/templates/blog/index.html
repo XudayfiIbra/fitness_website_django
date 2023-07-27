@@ -1,7 +1,9 @@
 {% extends 'blog/base.html' %}
 {% block content %}
 
-
-
-
+<div class="container">
+<div class="row gy-4">
+    {% include './featuredPosts.html' with featuredPosts=featuredPosts %}
+</div>
+</div>
 {% endblock content %}
