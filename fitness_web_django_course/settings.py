@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!fz3ph&)m)%!qann6uyax9=0h(3q4hlh_xp#uo#bu#_rf1j6*o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'fitness_web_django_course.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'test_django',
+        'USER': 'postgres',
+        'PASSWORD': 'xudayfi 11',
+        'HOST': 'localhost',
+        'PORT':'5432'
     }
 }
 
